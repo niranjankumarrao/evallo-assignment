@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE = process.env.REACT_APP_API_BASE || 'http://localhost:5000/api';
+const BASE = process.env.REACT_APP_API_BASE || "https://YOUR-RENDER-APP.onrender.com";
 const instance = axios.create({ baseURL: BASE, timeout: 5000 });
 instance.interceptors.request.use(config=>{
   const token = localStorage.getItem('token');
