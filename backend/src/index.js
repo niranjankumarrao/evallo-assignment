@@ -14,6 +14,10 @@ const SECRET = process.env.JWT_SECRET || 'evallo_dev_secret';
 const PORT = process.env.PORT || 5000;
 const LOGFILE = __dirname + '/logs.json';
 
+app.get("/", (req, res) => {
+  res.send("Backend is running ✔️");
+});
+
 // simple persistent logs file helper
 function addLog(entry){
   const now = new Date().toISOString();
